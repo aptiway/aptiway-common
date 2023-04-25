@@ -4,7 +4,7 @@ import civ.cnam.notification.adaptor.service.EmailNotificationService
 import civ.cnam.notification.adaptor.service.SMSNotificationService
 import civ.cnam.notification.model.NotificationChannel
 import civ.cnam.notification.service.NotificationService
-import com.sun.org.slf4j.internal.LoggerFactory
+import org.slf4j.LoggerFactory
 
 class NotificationServiceProvider {
 

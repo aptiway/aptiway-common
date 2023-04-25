@@ -5,7 +5,8 @@ import civ.cnam.notification.model.Notification
 import civ.cnam.notification.model.NotificationRequest
 import civ.cnam.notification.model.Template
 import civ.cnam.notification.service.NotificationService
-import com.sun.org.slf4j.internal.LoggerFactory
+import org.slf4j.LoggerFactory
+
 
 class NotificationSender(
     private var templateReader: TemplateReader,
