@@ -1,6 +1,9 @@
 package civ.cnam.notification.model
 
-data class Parameter(
-    val name: String,
-    val value: String
-)
+class Parameter{
+    var name: String =""
+    var value: String =""
+    constructor() {
+    }
+}
+

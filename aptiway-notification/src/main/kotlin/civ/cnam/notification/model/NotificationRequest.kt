@@ -5,7 +5,7 @@ data class NotificationRequest(
     val recipient:String,
     val templateName: String,
     val notificationChannel: NotificationChannel,
-    val parameter: List<Parameter>
+    val parameters: List<Parameter>
 
 )
 

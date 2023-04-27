@@ -1,9 +1,12 @@
 package civ.cnam.notification.model
 
-class Notification(
-    val recipient: String,
-    val clientId: String,
-    val body: String,
-    val subject: String?,
-    val sender: String
-)
+class Notification {
+    var recipient: String = ""
+    var clientId: String = ""
+    var body: String = ""
+    var subject: String? = null
+    var sender: String = ""
+
+    constructor() {
+    }
+}

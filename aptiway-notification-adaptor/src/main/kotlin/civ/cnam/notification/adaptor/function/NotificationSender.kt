@@ -21,10 +21,18 @@ class NotificationSender(
         val template: Template
         if (templateFlag) {
             templateReader = ResourceTemplateReader()
-            template = templateReader.readTemplate(notificationRequest.templateName)
+            template = (templateReader as ResourceTemplateReader).readTemplate(
+                notificationRequest.templateName,
+                notificationRequest.clientId,
+                notificationRequest.recipient
+            )
         } else {
             templateReader = DatabaseTemplateReader()
-            template = templateReader.readTemplate(notificationRequest.templateName)
+            template = (templateReader as DatabaseTemplateReader).readTemplate(
+                notificationRequest.templateName,
+                notificationRequest.clientId,
+                notificationRequest.recipient
+            )
         }
 
         val notification: Notification = template.generateNotification(notificationRequest)
